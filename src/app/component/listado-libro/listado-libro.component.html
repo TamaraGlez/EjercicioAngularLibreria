@@ -1,0 +1,13 @@
+<p>listado-libro works!</p>
+
+<input #buscador (input) = "buscar(buscador.value)"/>
+
+<div *ngFor="let libro of librosssFiltered" >
+  <h4> {{libro.name}} </h4>
+  <p> {{libro.autor}} </p>
+  <p> {{libro.year}} </p>
+  <img src= {{libro.image}} alt=" {{libro.name}} "/>
+
+
+<!-- librosss viene de la clave puesta en el padre libreria -->
+</div>
