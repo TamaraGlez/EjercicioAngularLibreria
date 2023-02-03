@@ -22,6 +22,6 @@ public librosssFiltered!: any
   }
 
   buscar (value: string){
-  this.librosssFiltered = this.librosss.filter((libro: any) => libro.name.includes(value))
+  this.librosssFiltered = this.librosss.filter((libro: any) => libro.name.toLowerCase.includes(value))
   }
 }

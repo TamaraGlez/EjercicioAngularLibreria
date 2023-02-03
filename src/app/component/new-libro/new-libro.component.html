@@ -1,1 +1,6 @@
 <p>new-libro works!</p>
+<label>nombre:</label>
+<input #name  />
+<label> imagen: </label>
+<input #imagen />
+<button (click)="crearNuevoLibro"(name.value, image.value) ></button>

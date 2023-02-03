@@ -14,6 +14,10 @@ export class NewLibroComponent implements OnInit {
 
   }
 
+  crearNuevoLibro (nombre:string, imagen:string) {
+    console.log(nombre, imagen)
+  }
+
 }
 
 
