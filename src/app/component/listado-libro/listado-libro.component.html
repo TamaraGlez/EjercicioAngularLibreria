@@ -1,11 +1,13 @@
 
 <div class="buscador-container">
+
   <label >Busca tu libro:</label>
   <input class="buscador-input" #buscador (input)="buscar(buscador.value)"/>
+
 </div>
 
 <div class="containerLibro">
-
+  <!-- pintamos los libros filtrados para que se pueda filtrar pero cuando no filtramos vuelve a todos los libros -->
   <div class="containerLibro-box" *ngFor="let libro of librosssFiltered" >
 
     <img class="containerLibro_img" src= {{libro.image}} alt={{libro.name}}/>
@@ -14,7 +16,6 @@
     <p> {{libro.year}} </p>
 
   </div>
-
 </div>
 
 <!-- librosssFiltered viene del hermano listado de libros que al ser un hermanos debe pasar la iinfo al padre y este al otro hermano-->
