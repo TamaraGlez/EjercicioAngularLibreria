@@ -1,8 +1,15 @@
-<app-listado-libro [librosss]="listado" ></app-listado-libro>
-<app-new-libro ></app-new-libro>
-
-
-<!-- listado viene del array de los datos -->
 <!-- ESTE ES EL PADRE -->
-<!-- (new-libro)="addLibro($event)"   -->
-<!-- [nombre que queramos]="libros es una variable del array"   -->
+<!-- new libro se comunica con el padre mediante el output y el padre a su vez manda la info al otro hermano listadolibros-->
+<!-- addLibro es la valor del mensaje que le llega del hijo con el altavoz output a través del evento recoge el libro que añadimos-->
+<!-- add libro es la función que se le aplica al mensaje $event que le llega a traves de altavoz del ehijio -->
+
+<app-new-libro (altavoz)="addLibro($event)" ></app-new-libro>
+
+<!-- la comunicacion es a través de dos input uno para el buscador y otro todos los libros -->
+
+<app-listado-libro [librosss]="listado" [librosssFiltered]="listado" ></app-listado-libro>
+
+<!-- [enviar datos input ] (recibir datos output) -->
+<!-- listado viene del array de los datos es una variable que está en el padre -->
+<!-- [nombre que queramos] este nombre hay que usarlo igual en el hijo listado- libros ya que es la info que le mandamos desde el padre
+="listado" es una variable del array del padre   -->

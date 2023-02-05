@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  color: whitesmoke;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+  align-items: center;
+}
+
+button {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-color: none;
+  background-color: orangered;
+  border-style: unset;
+  cursor: pointer;
+  color: white
+
+}
+
+input {
+  padding-left: 5px;
+  padding-right: 5px;
+  gap: 10px;
+  border-bottom: 0.5px solid orangered;
+  border-right: 0;
+  background-color: rgba(255, 68, 0, 0);
+  cursor: pointer;
+  color: white
+
+}
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: -10px;
+}
+h1 {
+  font-size: 56px;
+  color: orangered;
+}
+h2{
+  font-family: 'Sassy Frass', cursive;
+  color: whitesmoke;
+  font-size: 56px;
+  font-weight: lighter;
+  margin-block-start: -0.55em;
+  padding-right: 25px;
+}
+h4 {
+  color: orangered;
+  padding-bottom: 10px;
+}

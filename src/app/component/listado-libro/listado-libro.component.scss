@@ -1,0 +1,43 @@
+
+
+
+.buscador-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+.buscador-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.containerLibro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
+&-box {
+  display: flex;
+  width: 140px;
+  height: 200px;
+  flex-direction: column;
+
+}
+&_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 16px;
+}
+
+}

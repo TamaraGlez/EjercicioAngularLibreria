@@ -6,22 +6,23 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./listado-libro.component.scss']
 })
 export class ListadoLibroComponent implements OnInit {
-//libros es el mismo nombre de la clave del html de libreria(DEL PADRE)
+  //librosss es el mismo nombre de la clave del html de libreria y es la info q ue nos trae el padre por el input(DEL PADRE)
 
-public librosssFiltered!: any
+  // recogemos con el input los librosss del padre y las dos variables que van cambiando todos los libros y los filtrados
+  @Input() public librosss!: any
+  // al principio tiene los libros de arriba pero cuando usamos el evento filtra y muestra los filtrados
+  @Input() public librosssFiltered!: any
 
-  @Input() librosss!: any
+    // copiamos el array libros en librosssFiltered
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-
+    ngOnInit() {
     this.librosssFiltered = [...this.librosss]
+    }
 
+  // creamos este método para filtrar los libros por este va
+
+  buscar (value: string) {
+  this.librosssFiltered = this.librosss.filter((libro: any) => libro.name.toLowerCase().includes(value.toLowerCase()))
   }
 
-  buscar (value: string){
-  this.librosssFiltered = this.librosss.filter((libro: any) => libro.name.toLowerCase.includes(value))
-  }
 }
